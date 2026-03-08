@@ -166,7 +166,7 @@ class AutoRestartApp:
 
         tk.Label(path_frame,text="Process Path:",font=("Segoe UI",12),bg="#1e1e1e",fg="#ccc").pack(side="left")
 
-        self.process_path_entry = tk.Entry(path_frame,width=25)
+        self.process_path_entry = tk.Entry(path_frame,width=50)
         self.process_path_entry.pack(side="left",padx=5)
         self.process_path_entry.insert(0,self.process_path)
 
