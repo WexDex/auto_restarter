@@ -301,10 +301,19 @@ class AutoRestartApp:
                 os.system(f"taskkill /f /im {self.process_name}")
 
             if self.process_path:
+
+                process_dir = os.path.dirname(self.process_path)
+
                 if self.process_path.lower().endswith(".bat"):
-                    subprocess.Popen(["cmd", "/c", self.process_path])
+                    subprocess.Popen(
+                        ["cmd", "/c", self.process_path],
+                        cwd=process_dir
+                    )
                 else:
-                    subprocess.Popen(self.process_path)
+                    subprocess.Popen(
+                        self.process_path,
+                        cwd=process_dir
+                    )
 
             self.backend_next_restart = datetime.datetime.now()+datetime.timedelta(hours=self.backend_hours)
 
