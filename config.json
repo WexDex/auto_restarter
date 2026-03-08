@@ -1,0 +1,8 @@
+{
+    "hour": 1,
+    "minute": 0,
+    "backend_hours": 2,
+    "process_name": "notepad++.exe",
+    "process_path": "D:/new Projects/python/auto restart/restarter.bat",
+    "backend_enabled": true
+}
